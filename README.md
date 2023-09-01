@@ -1,7 +1,16 @@
-# community
+# nvcommunity
 NvChad community repo for sharing plugin configurations 
 
 This is inspired by AstroNvim's community repo, although this isnt meant to be used always by non nvchad users, because it might contain code related to nvchad's base46 theme loading for certain plugins so watch-out! 
+
+# Usage  
+
+- in custom plugins table
+```lua
+"NvChad/nvcommunity",
+{ import = "nvcommunity.diffview" },
+{ import = "nvcommunity.lazygit" },
+```
 
 # Contributing 
 
