@@ -6,7 +6,6 @@ local spec = {
           table.insert(opts.sources, { name = "codeium" })
           require("cmp").setup(opts)
       end,
-
       dependencies = {
           {
               "jcdickinson/codeium.nvim",

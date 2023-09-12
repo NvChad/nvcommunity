@@ -5,11 +5,6 @@ local spec = {
     cmd = { "HopWord", "HopLine", "HopLineStart", "HopWordCurrentLine" },
     opts = { keys = "etovxqpdygfblzhckisuran" },
     init = function()
-      local ext = require('custom.chadrc').ui.extended_integrations or {}
-      table.insert(ext, "hop")
-      require('custom.chadrc').ui.extended_integrations = ext
-      require('base46').load_all_highlights()
-      dofile(vim.g.base46_cache .. "hop")
       require("core.utils").load_mappings "hop"
     end,
   },
