@@ -7,6 +7,9 @@ local spec = {
     init = function()
       require("core.utils").load_mappings "hop"
     end,
+    config = function()
+      dofile(vim.g.base46_cache .. "hop")
+    end,
   },
 }
 
@@ -16,6 +19,12 @@ require("core.mappings").hop = {
     ["<leader><leader>t"] = { "<CMD> HopNodes <CR>", "Hint Tree" },
     ["<leader><leader>c"] = { "<CMD> HopLineStart<CR>", "Hint Columns" },
     ["<leader><leader>l"] = { "<CMD> HopWordCurrentLine<CR>", "Hint Line" },
+  },
+}
+
+require("custom.chadrc").ui = {
+  extended_integrations = {
+    "hop",
   },
 }
 
