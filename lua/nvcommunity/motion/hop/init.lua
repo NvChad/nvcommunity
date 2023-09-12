@@ -6,6 +6,7 @@ local spec = {
     opts = { keys = "etovxqpdygfblzhckisuran" },
     init = function()
       require("core.utils").load_mappings "hop"
+      require("plenary.reload").reload_module "base46"
       dofile(vim.g.base46_cache .. "hop")
     end,
   },
