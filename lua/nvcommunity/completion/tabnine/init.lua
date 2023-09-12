@@ -28,20 +28,11 @@ local spec = {
         end,
       },
     },
-    config = function()
-      local cmp = require("cmp")
-      
-      -- Retrieve the current sources
-      local sources = cmp.config.sources()
-
-      -- Add your new source to the sources table
-      table.insert(sources, { name = "cmp_tabnine" })
-
-      -- Set the updated sources
-      cmp.setup({
-        sources = sources,
-        -- Other cmp configurations
-      })
+    opts = function(_, opts)
+      if not opts.sources then
+        opts.sources = {}
+      end
+      table.insert(opts.sources, { name = "cmp_tabnine" })
     end,
   },
 }
