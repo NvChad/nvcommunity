@@ -2,6 +2,10 @@
 local spec = {
   {
     "hrsh7th/nvim-cmp",
+    config = function(_, opts)
+        table.insert(opts.sources, { name = "cmp_tabnine" })
+        require("cmp").setup(opts)
+    end,
     dependencies = {
       {
         "tzachar/cmp-tabnine",
@@ -28,12 +32,6 @@ local spec = {
         end,
       },
     },
-    opts = function(_, opts)
-      if not opts.sources then
-        opts.sources = {}
-      end
-      table.insert(opts.sources, { name = "cmp_tabnine" })
-    end,
   },
 }
 

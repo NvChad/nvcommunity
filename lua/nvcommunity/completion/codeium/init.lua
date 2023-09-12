@@ -1,18 +1,20 @@
 ---@type NvPluginSpec
 local spec = {
   {
-    "jcdickinson/codeium.nvim",
-    opts = {},
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "jcdickinson/codeium.nvim" },
-    opts = function(_, opts)
-      if not opts.sources then
-        opts.sources = {}
-      end
-      table.insert(opts.sources, { name = "codeium" })
-    end,
+      "hrsh7th/nvim-cmp",
+      config = function(_, opts)
+          table.insert(opts.sources, { name = "codeium" })
+          require("cmp").setup(opts)
+      end,
+
+      dependencies = {
+          {
+              "jcdickinson/codeium.nvim",
+              config = function()
+                  require("codeium").setup({})
+              end,
+          },
+      },
   },
 }
 
