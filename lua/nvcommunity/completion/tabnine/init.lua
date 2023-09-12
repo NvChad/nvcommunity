@@ -17,13 +17,31 @@ local spec = {
             snipper_placeholder = "..",
             ignored_file_types = {},
           }
+
+          vim.api.nvim_create_autocmd("BufRead", {
+            group = vim.api.nvim_create_augroup("prefetch", { clear = true }),
+            pattern = "*",
+            callback = function()
+              require("cmp_tabnine"):prefetch(vim.fn.expand "%:p")
+            end,
+          })
         end,
       },
     },
     config = function()
-      local opts = require "plugins.configs.cmp"
-      table.insert(opts.sources, { name = "cmp_tabnine" })
-      require("cmp").setup(opts)
+      local cmp = require("cmp")
+      
+      -- Retrieve the current sources
+      local sources = cmp.config.sources()
+
+      -- Add your new source to the sources table
+      table.insert(sources, { name = "cmp_tabnine" })
+
+      -- Set the updated sources
+      cmp.setup({
+        sources = sources,
+        -- Other cmp configurations
+      })
     end,
   },
 }
