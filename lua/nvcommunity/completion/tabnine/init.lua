@@ -21,14 +21,6 @@ local spec = {
             snipper_placeholder = "..",
             ignored_file_types = {},
           }
-
-          vim.api.nvim_create_autocmd("BufRead", {
-            group = vim.api.nvim_create_augroup("prefetch", { clear = true }),
-            pattern = "*",
-            callback = function()
-              require("cmp_tabnine"):prefetch(vim.fn.expand "%:p")
-            end,
-          })
         end,
       },
     },
