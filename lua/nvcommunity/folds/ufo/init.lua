@@ -3,6 +3,23 @@ local spec = {
   {
     "kevinhwang91/nvim-ufo",
     event = "VimEnter",
+    init = function()
+      vim.o.foldcolumn = "auto"
+      vim.o.foldlevel = 99
+      vim.o.foldlevelstart = 99
+      vim.o.foldnestmax = 0
+      vim.o.foldenable = true
+      vim.o.foldmethod = "indent"
+
+      vim.opt.fillchars = {
+        fold = " ",
+        foldopen = "",
+        foldsep = " ",
+        foldclose = "",
+        stl = " ",
+        eob = " ",
+      }
+    end,
     dependencies = {
       "kevinhwang91/promise-async",
       {
