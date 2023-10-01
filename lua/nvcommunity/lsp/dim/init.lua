@@ -1,7 +1,7 @@
 ---@type NvPluginSpec
 local spec = {
   {
-    "narutoxy/dim.lua",
+    "0oAstro/dim.lua",
     event = "LspAttach",
     config = function()
       require("dim").setup {}
