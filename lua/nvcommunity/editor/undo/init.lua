@@ -2,7 +2,7 @@
 local spec = {
   {
     "kevinhwang91/nvim-fundo",
-    event = "BufReadPost",
+    event = "VeryLazy",
     opts = {},
     init = function()
       vim.o.undofile = true
