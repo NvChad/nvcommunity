@@ -14,6 +14,19 @@ This is inspired by AstroNvim's community repo, although this isnt meant to be u
 { import = "nvcommunity.git.lazygit" },
 ```
 
+# Customize
+
+- In custom plugins table
+
+```lua
+{ import = "nvcommunity.completion.copilot" },
+{ "copilot.lua",
+    opts = {
+    ...
+    },
+},
+```
+
 # Contributing
 
 Try your best to lazy-load a plugin (Of course without breaking its functionality)
