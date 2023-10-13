@@ -1,7 +1,7 @@
 ---@type NvPluginSpec
 local spec = {
     {
-        "TimUntersberger/neogit",
+        "NeogitOrg/neogit",
         ft = { "diff" },
         cmd = "Neogit",
         dependencies = {"sindrets/diffview.nvim"},
