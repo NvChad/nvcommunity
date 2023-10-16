@@ -6,10 +6,14 @@
 
 ## Plug-in insertion
 
-The following code must be added for insertion into the configuration:
+You need to add the following code in the `custom/plugins.lua` file to include it in the configuration:
 
 ```lua
 "NvChad/nvcommunity",
 { import = "nvcommunity.git.diffview" },
 { import = "nvcommunity.git.neogit" },
 ```
+
+Once entered, it is necessary to close and reopen the editor to give NvChad a chance to install the missing plugins and activate the functionality.
+
+NOTE: The `diffview` plugin is also required since the proposed configuration uses it to provide better visualization of changes. 
