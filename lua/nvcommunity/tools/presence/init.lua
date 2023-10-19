@@ -2,7 +2,7 @@
 local spec = {
   {
     "andweeb/presence.nvim",
-    event = "VeryLazy",
+    event = "VimEnter",
     config = function()
       require("presence").setup {}
     end,
