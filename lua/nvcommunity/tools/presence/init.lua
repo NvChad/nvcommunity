@@ -1,8 +1,8 @@
 ---@type NvPluginSpec
 local spec = {
   {
-    "chikko80/error-lens.nvim",
-    event = "LspAttach",
+    "andweeb/presence.nvim",
+    event = "VimEnter",
     opts = {},
   },
 }
