@@ -33,13 +33,6 @@
    
 </p>
 
-
-# nvcommunity
-
-NvChad community repo for sharing plugin configurations
-
-This is inspired by AstroNvim's community repo.
-
 # Usage
 
 - In custom plugins table
@@ -68,3 +61,10 @@ This is inspired by AstroNvim's community repo.
 Try your best to lazy-load a plugin (Of course without breaking its functionality)
 
 - If you submit a plugin spec for a UI related plugin, please add extented integration for it in base46 repo.
+
+
+# Nvcommunity
+
+NvChad community repo for sharing plugin configurations
+
+This is inspired by AstroNvim's community repo.
