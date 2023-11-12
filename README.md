@@ -1,5 +1,5 @@
 
-<div align="center" id="madewithlua">
+<div align="center">
     <img src="https://nvchad.com/logo.svg" width=210", height="200">
 </div>
 
