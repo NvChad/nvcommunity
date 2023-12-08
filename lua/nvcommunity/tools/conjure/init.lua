@@ -2,7 +2,20 @@
 local spec = {
   {
     "Olical/conjure",
-    ft = { "clojure", "fennel", "python", "janet", "hy", "scheme", "guile", "lisp", "julia", "rust", "lua" },
+    ft = {
+      "clojure",
+      "fennel",
+      "janet",
+      "hy",
+      "julia",
+      "racket",
+      "scheme",
+      "lua",
+      "lisp",
+      "python",
+      "rust",
+      "sql",
+    },
     opts = {},
     config = function()
       require("conjure.main").main()
