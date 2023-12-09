@@ -55,7 +55,13 @@ local spec = {
                 text = { " " },
               },
               -- Segment: Fold Column
-              { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+              {
+                text = { builtin.foldfunc },
+                click = "v:lua.ScFa",
+                maxwidth = 1,
+                colwidth = 1,
+                auto = false,
+              },
               -- Segment: Add padding
               {
                 text = { " " },
@@ -75,6 +81,16 @@ local spec = {
                 text = { " ", " ", builtin.lnumfunc, " " },
                 click = "v:lua.ScLa",
                 condition = { true, builtin.not_empty },
+              },
+              -- Segment: GitSigns exclusive
+              {
+                sign = {
+                  namespace = { "gitsign.*" },
+                  maxwidth = 1,
+                  colwidth = 1,
+                  auto = false,
+                },
+                click = "v:lua.ScSa",
               },
               -- Segment: Add padding
               {
