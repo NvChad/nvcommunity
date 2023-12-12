@@ -6,20 +6,22 @@ local spec = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
     init = function()
+      require("core.mappings").foldpreview = {
+        n = {
+          ["<leader>a"] = {
+            function()
+              require("fold-preview").toggle_preview()
+            end,
+            "Fold preview",
+          },
+        },
+      }
+
       require("core.utils").load_mappings "foldpreview"
     end,
   },
 }
 
-require("core.mappings").foldpreview = {
-  n = {
-    ["<leader>a"] = {
-      function()
-        require("fold-preview").toggle_preview()
-      end,
-      "Fold preview",
-    },
-  },
-}
+
 
 return spec

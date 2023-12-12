@@ -4,15 +4,15 @@ local spec = {
   cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
   opts = {},
   init = function()
-    require("core.utils").load_mappings "todo"
+    require("core.mappings").trouble = {
+      plugin = true,
+      n = {
+        ["<leader>t"] = { "<CMD>TroubleToggle<CR>", "Toggle diagnostics" },
+        ["<leader>td"] = { "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", "Todo/Fix/Fixme" },
+      },
+    }
+    require("core.utils").load_mappings "trouble"
   end,
-}
-
-require("core.mappings").todo = {
-  n = {
-    ["<leader>t"] = { "<CMD>TroubleToggle<CR>", "Toggle diagnostics" },
-    ["<leader>td"] = { "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", "Todo/Fix/Fixme" },
-  },
 }
 
 return spec
