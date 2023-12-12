@@ -1,23 +1,21 @@
 ---@type NvPluginSpec
 local spec = {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "debugloop/telescope-undo.nvim" },
-  keys = {
+  dependencies = {
     {
-      "<leader>fu",
-      "<cmd>Telescope undo<CR>",
-      desc = "Find undos",
-    },
-  },
-  init = function()
-    require("telescope").load_extension "undo"
-    require("core.utils").load_mappings "undo"
-  end,
-}
+      "debugloop/telescope-undo.nvim",
+      init = function()
+        require("core.mappings").undo = {
+          plugin = true,
+          n = {
+            ["<leader>fu"] = { "<CMD>Telescope undo<CR>", "Find undo" },
+          },
+        }
 
-require("core.mappings").undo = {
-  n = {
-    ["<leader>fu"] = { "<CMD>Telescope undo<CR>", "Find undo" },
+        require("core.utils").load_mappings "undo"
+        require("telescope").load_extension "undo"
+      end,
+    },
   },
 }
 
