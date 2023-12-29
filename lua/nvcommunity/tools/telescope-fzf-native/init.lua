@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "nvim-telescope/telescope.nvim",
