@@ -2,6 +2,9 @@
 local spec = {
   "folke/trouble.nvim",
   cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
+  dependencies = {
+    "folke/todo-comments.nvim"
+  },
   opts = {},
   init = function()
     require("core.mappings").trouble = {
