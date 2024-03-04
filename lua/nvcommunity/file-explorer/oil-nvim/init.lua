@@ -3,7 +3,7 @@ local spec = {
   {
     "stevearc/oil.nvim",
     opts = {},
-    lazy = false,
+    event = "VeryLazy",
     cmd = "Oil",
     keys = {
       {
