@@ -5,14 +5,10 @@ local spec = {
     {
       "debugloop/telescope-undo.nvim",
       init = function()
-        require("core.mappings").undo = {
-          plugin = true,
-          n = {
-            ["<leader>fu"] = { "<CMD>Telescope undo<CR>", "Find undo" },
-          },
-        }
+        local map = vim.keymap.set
 
-        require("core.utils").load_mappings "undo"
+        map("n", "<leader>fu", "<CMD>Telescope undo<CR>", { desc = "Find undo" })
+
         require("telescope").load_extension "undo"
       end,
     },
