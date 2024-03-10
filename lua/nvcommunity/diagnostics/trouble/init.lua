@@ -10,14 +10,10 @@ local spec = {
   },
   opts = {},
   init = function()
-    require("core.mappings").trouble = {
-      plugin = true,
-      n = {
-        ["<leader>t"] = { "<CMD>TroubleToggle<CR>", "Toggle diagnostics" },
-        ["<leader>td"] = { "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", "Todo/Fix/Fixme" },
-      },
-    }
-    require("core.utils").load_mappings "trouble"
+    local map = vim.keymap.set
+
+    map("n", "<leader>t", "<CMD>TroubleToggle<CR>", { desc = "Toggle diagnostics" })
+    map("n", "<leader>td", "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", { desc = "Todo/Fix/Fixme" })
   end,
 }
 
