@@ -2,6 +2,12 @@
 local spec = {
   "folke/trouble.nvim",
   cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
+  dependencies = {
+    {
+      "folke/todo-comments.nvim",
+      opts = {}
+    }
+  },
   opts = {},
   init = function()
     local map = vim.keymap.set
