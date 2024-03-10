@@ -6,9 +6,12 @@ local spec = {
     cmd = { "TSJToggle" },
     opts = { use_default_keymaps = false },
     init = function()
-      local map = vim.keymap.set
-
-      map("n", "<leader>tt", "<CMD>TSJToggle<CR>", { desc = "Toggle Treesitter Join/Split" })
+      require("core.mappings").treesj = {
+        n = {
+          ["<leader>tt"] = { "<CMD>TSJToggle<CR>", "Toggle Treesitter Join/Split" },
+        },
+      }
+      require("core.utils").load_mappings "treesj"
     end,
   },
 }

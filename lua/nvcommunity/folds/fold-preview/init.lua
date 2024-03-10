@@ -6,11 +6,18 @@ local spec = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
     init = function()
-      local map = vim.keymap.set
+      require("core.mappings").foldpreview = {
+        n = {
+          ["<leader>a"] = {
+            function()
+              require("fold-preview").toggle_preview()
+            end,
+            "Fold preview",
+          },
+        },
+      }
 
-      map("n", "<leader>a", function()
-        require("fold-preview").toggle_preview()
-      end, { desc = "Fold preview" })
+      require("core.utils").load_mappings "foldpreview"
     end,
   },
 }

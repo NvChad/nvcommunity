@@ -5,12 +5,16 @@ local spec = {
     cmd = { "HopWord", "HopLine", "HopLineStart", "HopWordCurrentLine" },
     opts = { keys = "etovxqpdygfblzhckisuran" },
     init = function()
-      local map = vim.keymap.set
+      require("core.mappings").hop = {
+        n = {
+          ["<leader><leader>w"] = { "<CMD> HopWord <CR>", "Hint all words" },
+          ["<leader><leader>t"] = { "<CMD> HopNodes <CR>", "Hint Tree" },
+          ["<leader><leader>c"] = { "<CMD> HopLineStart<CR>", "Hint Columns" },
+          ["<leader><leader>l"] = { "<CMD> HopWordCurrentLine<CR>", "Hint Line" },
+        },
+      }
 
-      map("n", "<leader><leader>w", "<CMD> HopWord <CR>", { desc = "Hint all words" })
-      map("n", "<leader><leader>t", "<CMD> HopNodes <CR>", { desc = "Hint Tree" })
-      map("n", "<leader><leader>c", "<CMD> HopLineStart<CR>", { desc = "Hint Columns" })
-      map("n", "<leader><leader>l", "<CMD> HopWordCurrentLine<CR>", { desc = "Hint Line" })
+      require("core.utils").load_mappings "hop"
     end,
   },
 }
