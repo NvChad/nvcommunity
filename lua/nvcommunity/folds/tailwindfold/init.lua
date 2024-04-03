@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "razak17/tailwind-fold.nvim",

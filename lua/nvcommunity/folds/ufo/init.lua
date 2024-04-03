@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "kevinhwang91/nvim-ufo",

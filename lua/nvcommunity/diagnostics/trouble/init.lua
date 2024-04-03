@@ -1,12 +1,11 @@
----@type NvPluginSpec
 local spec = {
   "folke/trouble.nvim",
   cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
   dependencies = {
     {
       "folke/todo-comments.nvim",
-      opts = {}
-    }
+      opts = {},
+    },
   },
   opts = {},
   init = function()

@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "anuvyklack/fold-preview.nvim",
@@ -14,7 +13,5 @@ local spec = {
     end,
   },
 }
-
-
 
 return spec

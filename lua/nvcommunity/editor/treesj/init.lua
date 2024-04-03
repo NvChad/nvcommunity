@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "Wansmer/treesj",

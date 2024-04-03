@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "utilyre/barbecue.nvim",
