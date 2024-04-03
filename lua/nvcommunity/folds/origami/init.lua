@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "chrisgrieser/nvim-origami",

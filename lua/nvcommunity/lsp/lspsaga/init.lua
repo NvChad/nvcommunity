@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "nvimdev/lspsaga.nvim",

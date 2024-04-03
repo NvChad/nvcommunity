@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "karb94/neoscroll.nvim",

@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "smoka7/hop.nvim",

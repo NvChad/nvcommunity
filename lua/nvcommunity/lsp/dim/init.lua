@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "0oAstro/dim.lua",

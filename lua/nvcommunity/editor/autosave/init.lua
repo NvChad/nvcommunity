@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "okuuva/auto-save.nvim",

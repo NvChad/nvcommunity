@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "nvim-treesitter/nvim-treesitter-context",

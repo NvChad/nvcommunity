@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "MattesGroeger/vim-bookmarks",

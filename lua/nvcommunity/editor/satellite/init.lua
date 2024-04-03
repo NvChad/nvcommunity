@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "lewis6991/satellite.nvim",

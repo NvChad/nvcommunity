@@ -1,3 +1,4 @@
+---@type NvPluginSpec
 local spec = {
   {
     "hrsh7th/nvim-cmp",
