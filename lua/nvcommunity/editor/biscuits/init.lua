@@ -1,4 +1,3 @@
----@type NvPluginSpec
 local spec = {
   {
     "code-biscuits/nvim-biscuits",

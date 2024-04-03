@@ -1,7 +1,7 @@
 local spec = {
   {
-    "andweeb/presence.nvim",
-    event = "VimEnter",
+    "IogaMaster/neocord",
+    event = "VeryLazy",
     opts = {},
   },
 }

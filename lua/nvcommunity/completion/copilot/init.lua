@@ -12,8 +12,6 @@
 --- }
 --- ```
 
-
----@type NvPluginSpec
 local spec = {
   {
     "zbirenbaum/copilot.lua",
@@ -22,8 +20,8 @@ local spec = {
     opts = {
       suggestion = {
         auto_trigger = true,
-      }
-    }
+      },
+    },
   },
 }
 
