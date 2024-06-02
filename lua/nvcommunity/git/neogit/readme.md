@@ -17,3 +17,10 @@ You need to add the following code in the `custom/plugins.lua` file to include i
 Once entered, it is necessary to close and reopen the editor to give NvChad a chance to install the missing plugins and activate the functionality.
 
 NOTE: The `diffview` plugin is also required since the proposed configuration uses it to provide better visualization of changes. 
+
+- Include base46's neogit highlight groups by this in your chadrc.lua :
+```lua
+M.base46 = {
+  integrations = { "neogit" },
+}
+```
